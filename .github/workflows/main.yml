@@ -28,6 +28,10 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@v5
+      - name: Debug Variables
+        run: |
+
+          echo "POLARIS_URL='${{ vars.POLARIS_URL }}'"
 
       - name: Polaris Security Scan
         id: polaris-scan
